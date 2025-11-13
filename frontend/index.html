@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Planner</title>
+    <!-- Progressive Web App manifest -->
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icons/icon-192.png" />
+    <meta name="theme-color" content="#1976d2" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Daily Planner</h1>
+    </header>
+    <main>
+      <section id="task-form">
+        <h2>Add a new entry</h2>
+        <form id="addTaskForm" autocomplete="off">
+          <div class="field">
+            <label for="taskDate">Date</label>
+            <input type="date" id="taskDate" required />
+          </div>
+          <div class="field">
+            <label for="taskStart">Start time</label>
+            <input type="time" id="taskStart" />
+          </div>
+          <div class="field">
+            <label for="taskEnd">End time</label>
+            <input type="time" id="taskEnd" />
+          </div>
+          <div class="field">
+            <label for="taskCategory">Category</label>
+            <input type="text" id="taskCategory" placeholder="e.g. Work, Personal" />
+          </div>
+          <div class="field">
+            <label for="taskDescription">Description</label>
+            <textarea id="taskDescription" rows="3" required></textarea>
+          </div>
+          <button type="submit">Add entry</button>
+        </form>
+      </section>
+      <section id="tasksListSection">
+        <h2>Your entries</h2>
+        <div id="tasksList"></div>
+      </section>
+    </main>
+    <footer>
+      <p>Install this planner on your device for quick access.</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
